@@ -45,10 +45,9 @@ build.bat
 
 ## Install
 
-Copy `tdu_savepath.asi` and `tdu_savepath.ini` into the game's `scripts` folder.
-`dinput8.dll` in the game root is Ultimate ASI Loader; it loads `scripts\*.asi` from its
-DllMain/TLS callback, i.e. before the game's entry point, so the hooks are live before
-any path is computed.
+1. Download the Ultimate ASI Loader (dinput8.dll, 32-bit) and place it in the game's root folder.
+2. Create a new folder called 'scripts' in the game's root folder.
+3. Copy `tdu_savepath.asi` and `tdu_savepath.ini` into the `scripts` folder.
 
 ## Verify
 
@@ -59,6 +58,10 @@ any path is computed.
 
 ## Caveats
 
-* The game folder must be writable (it is here: `D:\Test Drive Unlimited`).
 * `SHGetFolderPathA` also serves the crash-dump path, which then lands in the same tree.
 * CD-key / GameSpy reads stay registry-based and are unaffected.
+
+## AI disclosure
+
+Project was created by DeepSeek and tested by myself.
+
